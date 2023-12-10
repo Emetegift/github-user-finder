@@ -57,6 +57,11 @@ class UI {
     document.getElementById("repo").innerHTML = output;
   }
 
+  clearRepos() {
+    const repos = document.getElementById("repo");
+    repos.innerHTML = "";
+  }
+
   //show alert message
   showAlert(message, className) {
     //Clear any remaining alert which will prevent multiple alerts from happening
@@ -79,7 +84,7 @@ class UI {
     //Time out after displaying alert for 3 seconds
     setTimeout(() => {
       this.clearAlert();
-    }, 1000);
+    }, 2000);
   }
 
   //clear alert message
@@ -91,6 +96,7 @@ class UI {
   }
   // To make sure that the page is cleared after clearing the input
   clearProfile() {
-    this.profile.innerHTML = "";
+    this.profile.innerHTML = " ";
+    this.clearRepos();
   }
 }
